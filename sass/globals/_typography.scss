@@ -1,0 +1,56 @@
+@use 'function' as m;
+@use 'variables';
+
+h1, h2, h3 {
+    color: $dark_grayish_blue;
+}
+
+h1 {
+    font-size: m.rem(25);
+    font-weight: 600;
+    padding: m.rem(0) m.rem(4);
+    margin-top: -1.3rem;
+
+    @include breakpoint('medium') {
+        font-size: m.rem(35);
+        margin-top: -2.2rem;
+    }
+
+    @include breakpoint('large') {
+        font-size: m.rem(40);
+    }
+}
+
+h2 {
+    font-size: m.rem(21);
+
+    @include breakpoint('medium') {
+        font-size: m.rem(29);
+    }
+
+    @include breakpoint('large') {
+        font-size: m.rem(34);
+    }
+}
+
+h3 {
+    font-size: m.rem(19);
+
+    @include breakpoint('medium') {
+        font-size: m.rem(22);
+    }
+}
+
+p {
+    margin-top: 1rem;
+    color: $grayish_blue;
+    font-size: m.rem(13);
+
+    @include breakpoint('medium') {
+        font-size: m.rem(16);
+    }
+
+    @include breakpoint('large') {
+        font-size: $fontsize;
+    }
+}

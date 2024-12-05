@@ -1,0 +1,30 @@
+@use 'breakpoints';
+@import 'variables';
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontfamily;
+    font-size: $fontsize;
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+
+

@@ -1,0 +1,132 @@
+@use 'function' as x;
+@use 'variables';
+
+.main {
+    padding: x.rem(0) x.rem(24);
+    text-align: center;
+
+    @include breakpoint('medium') {
+        max-width: x.rem(740);
+        margin: 0 auto;
+    }
+
+    &__buttons {
+        margin-top: x.rem(38);
+        margin-bottom: x.rem(132);
+
+        @include breakpoint('large') {
+            margin-bottom: x.rem(140);
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+        width: x.rem(250);
+        margin-top: x.rem(18);
+        padding: x.rem(13) 0;
+        font-family: $fontfamily;
+        font-weight: 500;
+        border: none;
+        border-bottom: x.rem(2) solid hsl(173, 63%, 36%);
+        background-color: $strong_cyan;
+        color: white;
+        border-radius: x.rem(48);
+        box-shadow: 0 2px x.rem(7) $strong_cyan;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            background-color: hsla(171, 66%, 44%, 0.8);
+        }
+
+        @include breakpoint('medium') {
+            display: inline;
+            font-size: $fontsize;
+            width: x.rem(227);
+            margin-right: x.rem(16);
+        }
+    }
+
+    &__button--blue {
+        background-color: $light_blue;
+        box-shadow: 0 2px x.rem(4) $light_blue;
+        border-bottom: x.rem(2) solid hsl(233, 53%, 52%);
+
+        &:hover {
+            background-color: hsla(233, 100%, 69%, 0.8);
+        }
+    }
+
+    & .section {
+
+        &__aside {
+            margin-top: x.rem(49);
+            margin-bottom: x.rem(140);
+
+            @include breakpoint('large') {
+                margin-left: x.rem(445);
+                text-align: left;
+            }
+        }
+
+        & p {
+            font-size: x.rem(14);
+            margin-top: x.rem(10);
+            margin-bottom: x.rem(36);
+
+            @include breakpoint('large') {
+                margin-bottom: x.rem(60);
+            }
+        }
+
+        &__title {
+            margin-bottom: x.rem(53);
+    
+            @include breakpoint('large') {
+                margin-bottom: x.rem(84);
+            }
+
+            & p {
+                font-size: x.rem(12);
+
+                @include breakpoint('medium') {
+                    font-size: x.rem(16);
+                }
+
+                @include breakpoint('large') {
+                    font-size: $fontsize;
+                }
+            }
+        }
+        
+        &__info {
+            
+            @include breakpoint('large') {
+                margin-top: x.rem(100);
+            }
+
+            p {
+
+                margin-bottom: x.rem(53);
+
+                @include breakpoint('medium') {
+                font-size: x.rem(16);
+                margin-bottom: x.rem(70);
+                }
+
+                @include breakpoint('large') {
+                font-size: $fontsize;
+                margin-bottom: x.rem(170);
+                }
+            }
+
+            & img {
+
+                @include breakpoint('large') {
+                transform: scale(1.3);
+                }
+            }
+        }
+    }
+}

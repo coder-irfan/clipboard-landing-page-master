@@ -1,0 +1,82 @@
+@use 'function' as p;
+
+.footer {
+    background-color: hsl(0, 0%, 96%);
+    text-align: center;
+    padding-bottom: p.rem(16);
+
+    @include breakpoint('large') {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+    }
+
+    &__image {
+        padding-top: p.rem(48);
+    }
+
+    &__informations {
+
+        & nav {
+            margin: p.rem(32) 0;
+        
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                 @include breakpoint('large') {
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    row-gap: p.rem(35);
+                    column-gap: p.rem(80);
+                    justify-content: center;
+                }
+            }
+
+            & li {
+                list-style-type: none;
+                margin-top: p.rem(18);
+                font-size: p.rem(14);
+
+                @include breakpoint('large') {
+                    font-size: p.rem(17);
+                    margin: -0.7rem 0;
+
+                    &:nth-child(1) {grid-column: 1; grid-row: 1;}
+                    &:nth-child(2) {grid-column: 1; grid-row: 2;}
+                    &:nth-child(3) {grid-column: 2; grid-row: 1;}
+                    &:nth-child(4) {grid-column: 2; grid-row: 2;}
+                    &:nth-child(5) {grid-column: 3; grid-row: 1;}
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: $dark-grayish_blue;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $strong_cyan;
+                    }
+
+                    @include breakpoint('large') {
+                        display: grid;
+                        grid-template-columns: repeat(1fr 1fr);
+                    }
+                }
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: p.rem(30);
+    }
+}
+
+  
