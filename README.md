@@ -4,7 +4,7 @@ This is a responsive landing page for a fictional product called **Clipboard**, 
 
 ## 🔗 Live Preview
 
-👉 [Click here to view the live site](https://mohammad-irfan-noorzada.github.io/clipboard-landing-page-master/)
+👉 [Click here to view the live site](https://coder-irfan.github.io/clipboard-landing-page-master/)
 
 ---
 
